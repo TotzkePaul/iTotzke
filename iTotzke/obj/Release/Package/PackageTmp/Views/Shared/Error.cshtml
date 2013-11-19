@@ -1,0 +1,56 @@
+﻿@using System.Diagnostics
+@using iTotzke.Utilites
+@*model iTotzke.Models.CreateLesson*@
+@model System.Web.Mvc.HandleErrorInfo
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Error";
+    try
+    {
+        Logger logger = new Logger();
+        //Exception ex = Server.GetLastError();
+        string userName = User.Identity.Name;
+        if (userName != null && userName.Length == 0)
+        {
+            userName = null;
+        }
+        if (Model != null)
+        {
+            Exception ex = Model.Exception;
+            ViewBag.ErrorLogged = logger.Add(ex, ex.Message, ex.Source, userName);
+        }
+        else
+        {
+            ViewBag.ErrorLogged = false;
+        }
+
+    }
+    catch (Exception ex)
+    {
+        Debugger.Break();
+    }
+}
+
+<div class="list-header clearfix ErrorTitle">
+    <span>Error</span>
+</div>
+<div class="list-sfs-holder">
+    <div class="alert alert-error ">
+        An unexpected error has occurred. Please take a moment to contact the system administrator.</div>
+    @if (Model != null && HttpContext.Current.IsDebuggingEnabled)
+    {
+        <div>
+            <p>
+                <b>Exception:</b> @Model.Exception.Message<br />
+                <b>Controller:</b> @Model.ControllerName<br />
+                <b>Action:</b> @Model.ActionName<br/>
+                <b>Logged:</b> @ViewBag.ErrorLogged
+            </p>
+            <div style="overflow:scroll">
+                <pre>
+@Model.Exception.StackTrace
+                </pre>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,35 @@
+﻿@model iTotzke.Models.CreateCourse
+@{
+    ViewBag.Title = "CreateCourse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CreateCourse</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Course submission failed. Check details.");
+    <div>
+        <fieldset>
+            <legend>Create Class</legend>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.CourseName)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.CourseName)
+                @Html.ValidationMessageFor(u => u.CourseName)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.SubjectId)
+            </div>
+            <div class="editor-field"> 
+                @Html.DropDownListFor(u => u.SubjectId, new SelectList(iTotzke.Utilites.ContraClass.SubjectList, "value",  "text", ViewBag.SubjectId))
+                @Html.ValidationMessageFor(u => u.SubjectId)
+            </div>
+            <div class="editor-label">
+                @Html.CheckBoxFor(u => u.IsPrivate)
+                @Html.LabelFor(u => u.IsPrivate)
+            </div>
+            <input type="submit" value="Create" />
+        </fieldset>
+    </div>
+}

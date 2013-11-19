@@ -1,0 +1,29 @@
+﻿@using iTotzke.Utilites
+@model iTotzke.Models.UserReset
+@{
+    ViewBag.Title = "Recover";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "New User failed to Reset Password. Check your details.");
+    <div>
+        <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+        <fieldset>
+            <legend>Recover User</legend>
+            <div class="editor-label">     
+                @Html.LabelFor(u => u.Email)
+                @Html.TextBoxFor(u => u.Email)
+                @Html.ValidationMessageFor(u => u.Email)
+            </div>
+            <div class="editor-field">
+                @Html.GenerateCaptcha(Theme.White)
+                @Html.ValidationMessageFor(u => u.Recaptcha)
+            </div>
+            <input type="submit" value="Reset" />
+        </fieldset>
+    </div>
+}
+
+
+

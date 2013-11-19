@@ -1,0 +1,20 @@
+﻿@using iTotzke.Composites
+@using iTotzke.Utilites
+@{
+    ViewBag.Title = "Subject";
+    ViewBag.SubjectName = (string) ContraClass.GetSubjectNameById(Convert.ToInt32(ViewBag.SubjectId));
+}
+
+<h2>@ViewBag.SubjectName</h2>
+<ol class="breadcrumb">
+    <li>@Html.ActionLink("ContraClass", "ContraClass")</li>
+    <li class="active">@ViewBag.SubjectName </li>
+</ol>
+
+@Html.ActionLink("Create a Class", "CreateCourse","Apps", new {id=Convert.ToInt32(ViewBag.SubjectId)}, null )
+<br/>
+@foreach (Course c in ViewBag.AllCourses)
+{
+    @Html.ActionLink(c.CourseName, "Course", "Apps", new {id=c.CourseId}, null)
+    <br />
+}

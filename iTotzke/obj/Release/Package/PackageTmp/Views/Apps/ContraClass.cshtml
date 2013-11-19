@@ -1,0 +1,23 @@
+﻿@using iTotzke.Composites
+@using iTotzke.Utilites
+@{
+    ViewBag.Title = "ContraClass";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ContraClass</h2>
+@Html.ActionLink("Create a Class", "CreateCourse","Apps")
+<br/>
+@Html.DropDownList("SubjectDropdown", new SelectList(
+                    iTotzke.Utilites.ContraClass.SubjectList,
+                  "value",
+                  "text",
+                   0))
+<input type="button" name="test" value="Go!" onClick="location = 'Subject/'+ $('#SubjectDropdown').val(); false;"/>
+<br />
+<h3>All Courses</h3>
+@foreach (Course c in ViewBag.AllCourses)
+{
+    @Html.ActionLink(ContraClass.GetSubjectNameById(c.SubjectId)+ ": " + c.CourseName, "Course", "Apps", new {id=c.CourseId}, null)
+    <br />
+}

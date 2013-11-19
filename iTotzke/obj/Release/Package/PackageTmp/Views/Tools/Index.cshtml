@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tools</h2>
+
+<div>
+    <div>
+        <div id="tabs" data-tabs="true;" style="min-height:420px;">
+            <ul>
+                <li><a href="#ObjectTab">Object</a></li>
+                <li><a href="#CSharpTab">C Sharp</a></li>
+                <li><a href="#HtmlTab">Html</a></li>
+                <li><a href="#JScriptTab">JScript</a></li>
+                <li><a href="#SQLTab">SQL Server</a></li>
+                <li><a href="#WebServiceTab">WebService</a></li>
+                <li><a id="PreviewLink" href="#PreviewTab">Preview</a></li>
+            </ul>
+            <div id="ObjectTab">
+                <div>
+                    <label>Object Name:<input id="ObjectNameText" type="text" value="Example"/></label>
+                    <label>JS Namespace:<input id="JsNamespaceText" type="text" value="DefaultNS"/></label>
+                    <input id="ToggleDefault"  class="inline aligntop padsides" type="button" data-button="true" value="Toggle Defaults" /> <br/>
+                    <div id="ExtraControls" style="display: none;">
+                        <label class="block"> <input value="default" type="checkbox" name="PrependName" checked="checked"/> Prepend with Object Name</label>
+                        Using Statements(C#) <br/>
+                        <textarea id="UsingStmtsCS" style="height: 200px;">using System;&#13;&#10;using System.Collections.Generic;&#13;&#10;using System.Configuration;&#13;&#10;using System.Linq;&#13;&#10;using System.Web;</textarea> <br/>
+                        
+                        Using Statements(WebSerice) <br/>
+                        <textarea id="UsingStmtsWS" style="height: 200px;">using System;&#13;&#10;using System.Data;&#13;&#10;using System.Web;&#13;&#10;using System.Collections;&#13;&#10;using System.Web.Services;&#13;&#10;using System.Web.Services.Protocols;&#13;&#10;using System.Collections.Generic;&#13;&#10;using System.Linq;&#13;&#10;</textarea> <br/>
+                        Web Service Attribute <br/>
+
+                        <textarea id="WebServiceAttr" style="height: 200px;">[WebService(Namespace = "http://tempuri.org/")]&#13;&#10;[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]&#13;&#10;[System.ComponentModel.ToolboxItem(true)]&#13;&#10;[System.Web.Script.Services.ScriptService]</textarea>
+                        Callback JScript <br/>
+                        <textarea id="CallbackJs" style="height:500px; width: 100%">
+function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {&#13;&#10;       $(".view", nRow).empty();&#13;&#10;        $(".edit", nRow).empty();&#13;&#10;        $(".delete", nRow).empty();&#13;&#10;         var viewButton = $("<a href='#' class='viewButton'></a>").button({&#13;&#10;                text: false,&#13;&#10;                icons: { primary: "ui-icon-search" }&#13;&#10;          });&#13;&#10;        $('.view', nRow).append(viewButton);&#13;&#10;        var editButton = $("<a href='#' class='editButton'></a>").button({&#13;&#10;                text: false,&#13;&#10;                icons: { primary: "ui-icon-pencil" }&#13;&#10;            });&#13;&#10;       $('.edit', nRow).append(editButton);&#13;&#10;&#13;&#10;        var delButton = $("<a href='#' class='deleteButton'></a>").button({&#13;&#10;                text: false,&#13;&#10;                icons: { primary: "ui-icon-trash" }&#13;&#10;            });&#13;&#10;        $('.delete', nRow).append(delButton);&#13;&#10;        return nRow;&#13;&#10;};&#13;&#10;</textarea>
+                        <textarea>
+function (nRow) {&#13;&#10;$(".view", nRow).empty();&#13;&#10;        var viewButton = $("<a href='#' class='viewButton'></a>").button({&#13;&#10;            text: false,&#13;&#10;            icons: {&#13;&#10;                primary: "ui-icon-search"            }&#13;&#10;        });&#13;&#10;        $('.view', nRow).append(viewButton);&#13;&#10;        $(".edit", nRow).empty();&#13;&#10;        $(".delete", nRow).empty();&#13;&#10;        var editButton = $("<a href='#' class='editButton'></a>").button({&#13;&#10;            text: false,&#13;&#10;            icons: {&#13;&#10;                primary: "ui-icon-pencil"&#13;&#10;            }&#13;&#10;        });&#13;&#10;        $('.edit', nRow).append(editButton);&#13;&#10;        var delButton = $("<a href='#' class='deleteButton'></a>").button({&#13;&#10;            text: false,&#13;&#10;            icons: {&#13;&#10;                primary: "ui-icon-trash"&#13;&#10;            }&#13;&#10;        });&#13;&#10;        $('.delete', nRow).append(delButton);&#13;&#10;        return nRow;&#13;&#10;    };&#13;&#10;};&#13;&#10;</textarea>
+                    </div>
+                    <label class="inlineblock aligntop padsides"> <input id="IdCheckbox" value="IdValue" type="checkbox"/> Identifier</label>
+                    <div class="inlineblock aligntop padsides">
+                        <label class="block"> <input value="default" type="radio" name="TypeRadio" checked="checked"/> Default</label>
+                        <label class="block"> <input value="Array" type="radio" name="TypeRadio"/> Array</label>
+                        <label class="block"> <input value="List" type="radio" name="TypeRadio"/> List</label>
+                    </div>
+                    <label class="inline aligntop padsides">Type:
+                        <select id="TypeSelect">
+                            <option value="Object"> Pick one</option>
+                            <option value="int">Integer</option>
+                            <option value="string">String</option>
+                            <option value="bool">Boolean</option>
+                            <option value="double">Double</option>
+                            <option value="decimal">Decimal</option>
+                            <option value="char">Char</option>
+                            <option value="long">Long</option>
+                            <option value="float">Float</option>
+                            <option value="DateTime">DateTime</option>
+                            <option value="Date">Date</option>
+                            <option value="dynamic">Dynamic</option>
+                            <option value="var">Custom/Var</option>
+                        </select>
+                    </label>
+                    <label class="inline aligntop padsides"> Property Name:<input id="NameText" type="text"/></label>
+                    <input id="SubmitVar" class="inline aligntop padsides" type="button" data-button="true" value="Add" />
+                </div>
+                <ul id="sortable">
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s bullet"></span><span class="datainfo" data-info="int Id id">int Id (id)</span></li>
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s bullet"></span><span class="datainfo" data-info="string Name ">string Name </span></li>
+                    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s bullet"></span><span class="datainfo" data-info="string Text ">string Text </span></li>
+                </ul>
+                
+                <div>
+                    <input id="UpdateAll" class="inline aligntop padsides" type="button" data-button="true" value="Update" />
+                </div> <br /><br /><br />
+                <div style="width: 392px">
+                    Directions: Fill in the Data. Id is only useful to the SQL, and inputs for the Web Service. 
+                    When you add a property, it will go into a Dragable List. Click on the object to Delete it. 
+                    A confirmation Dialog will appear.
+                </div>
+            </div>
+            <div id="CSharpTab">
+                <textarea id="CSharpText" class="MarkItUp" cols="80" rows="20">
+                </textarea>
+
+            </div>
+            <div id="HtmlTab">
+                <textarea id="HtmlText" class="MarkItUp" cols="80" rows="20">
+                </textarea>
+            </div>
+            <div id="JScriptTab">
+                <textarea id="JScriptText" class="MarkItUp" cols="80" rows="20">
+                </textarea>
+            </div>
+            <div id="SQLTab">
+                <textarea id="SQLText" cols="80" class="MarkItUp" rows="20">
+                </textarea>
+            </div>
+            <div id="WebServiceTab">
+                <textarea id="WebServiceText" class="MarkItUp" cols="80" rows="20">
+                </textarea>
+            </div>
+            <div id="PreviewTab">
+                <div id="PreviewArea">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/tools")
+@Styles.Render("~/Content/markitup")
+@Styles.Render("~/Content/tools")

@@ -1,0 +1,47 @@
+﻿@using iTotzke.Utilites
+@model iTotzke.Models.RegisterNewUser
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("Register", "User"))
+{
+    @Html.ValidationSummary(true, "New User failed to Register. Check your details.");
+    <div>
+        <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+        <fieldset>
+            <legend>Register</legend>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.UserName)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.UserName)
+                @Html.ValidationMessageFor(u => u.UserName)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.Password)
+            </div>
+            <div class="editor-field">
+                @Html.PasswordFor(u => u.Password)
+                @Html.ValidationMessageFor(u => u.Password)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.ConfirmPassword)
+            </div>
+            <div class="editor-field">
+                @Html.PasswordFor(u => u.ConfirmPassword)
+                @Html.ValidationMessageFor(u => u.ConfirmPassword)
+            </div>
+            <div class="editor-label">     
+                @Html.LabelFor(u => u.Email)
+                @Html.TextBoxFor(u => u.Email)
+                @Html.ValidationMessageFor(u => u.Email)
+            </div>
+            <div class="editor-field">
+                @Html.GenerateCaptcha(Theme.White)
+                @Html.ValidationMessageFor(u => u.Recaptcha)
+            </div>
+            <input type="submit" value="Register" />
+        </fieldset>
+    </div>
+}

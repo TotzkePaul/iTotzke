@@ -1,0 +1,44 @@
+﻿@using System.Activities.Expressions
+@using System.Web.UI.WebControls
+@using iTotzke.Composites
+@using iTotzke.Models
+
+<div id="NewComment" class="CommentWrapper Odd">
+    <h3>Comments:</h3>
+    @if (ViewBag.comments == null)
+    {
+        <div>No Comments Available. </div>
+    }
+    else
+    {
+    @helper ShowTree(List<Comment> comments, bool flip)
+    {
+            
+        <div class="CommentWrapper @(flip?"Even":"Odd")">
+            @foreach (Comment foo in comments)
+            {
+                <div class="Username @foo.Username bold">
+                    @foo.Username
+                </div>
+                <div class="CommentText" data-comment-id="@foo.CommentId">
+                    @foo.CommentText
+                </div>
+                <div>
+                    <a onclick="Core.ReplyToComment(this, @foo.CommentId);">Reply</a>
+                </div>
+                <div class="CommentChildren">      
+                    @if (foo.ChildComments != null && foo.ChildComments.Any())
+                    {
+                        @ShowTree(foo.ChildComments, !flip)
+                    }
+                </div>
+            }
+        </div><br/>
+    }
+        <div class="CommentArea">
+            @ShowTree(ViewBag.comments, false)
+            @Html.Partial("SubmitComment", new LessonComment(){LessonId= ViewBag.lessonId})
+        </div>
+    }
+    
+</div>

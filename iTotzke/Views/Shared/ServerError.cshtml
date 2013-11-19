@@ -1,0 +1,27 @@
+﻿@using iTotzke.Utilites
+@{
+    Layout = "_Layout.cshtml";
+    ViewBag.Title = "Error";
+    Logger logger = new Logger();
+    //Exception ex = Server.GetLastError();
+    string userName = User.Identity.Name;
+    if (userName != null && userName.Length == 0)
+    {
+        userName = null;
+    }
+    var ex = @Model.Exception;
+    ViewBag.ErrorLogged = logger.Add(ex, ex.Message, ex.Source, userName);
+}
+<div class="list-header clearfix">
+    <span class="ErrorTitle">Error</span>
+</div>
+<div class="list-sfs-holder">
+    <div class="alert alert-error">
+        An unexpected error has occurred. Please contact the system administrator.</div>
+   <h2><@Html.Encode(ViewData["Title"]) </h2>  
+<p>@Html.Encode(ViewData["Description"])</p>  
+  
+<div>  
+Return to the @Html.ActionLink("home page", "Index", "Home").  
+</div>  
+</div>

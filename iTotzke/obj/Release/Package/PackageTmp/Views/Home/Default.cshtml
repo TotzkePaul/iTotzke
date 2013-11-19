@@ -1,0 +1,14 @@
+﻿@using iTotzke.Utilites
+@model iTotzke.Models.ContentPage
+
+<div>
+    <div class="header">
+        @Model.Title
+    </div>
+    <div>
+        @Model.Body
+    </div>
+    <div>
+        <button onclick="location.href='@Model.Link';return false;">Next</button>
+    </div>
+</div>

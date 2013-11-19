@@ -1,0 +1,60 @@
+﻿@model iTotzke.Models.EditLesson
+@{
+    ViewBag.Title = "EditLesson";
+}
+
+<h2>EditLesson</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Lesson submission failed. Check details.");
+    <div>
+        <fieldset>
+            <legend>Edit Lesson</legend>
+            <div>
+                @Html.HiddenFor(u=>u.LessonId)
+                @Html.ValidationMessageFor(u=>u.LessonId)
+            </div>
+            <div>
+                @Html.HiddenFor(u=>u.CourseId)
+                @Html.ValidationMessageFor(u=>u.CourseId)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.LessonName)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.LessonName)
+                @Html.ValidationMessageFor(u => u.LessonName)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.Link)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.Link)
+                @Html.ValidationMessageFor(u => u.Link)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.LinkTypeId)
+            </div>
+            <div class="editor-field">
+                @Html.DropDownListFor(u => u.LinkTypeId, new SelectList( ViewBag.LinkTypes, "LinkTypeId",  "LinkTypeName", 0))
+                @Html.ValidationMessageFor(u => u.LinkTypeId)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.SectionName)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(u => u.SectionName)
+                @Html.ValidationMessageFor(u => u.SectionName)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(u => u.LessonText)
+            </div>
+            <div class="editor-field">
+                @Html.TextAreaFor(u => u.LessonText)
+                @Html.ValidationMessageFor(u => u.LessonText)
+            </div>
+            <input type="submit" value="Save" />
+        </fieldset>
+    </div>
+}

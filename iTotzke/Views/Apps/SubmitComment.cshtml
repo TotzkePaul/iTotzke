@@ -1,0 +1,31 @@
+﻿@model iTotzke.Models.LessonComment
+@{
+    ViewBag.Title = "SubmitComment";
+}
+
+<h4>Submit Comment</h4>
+@using (Ajax.BeginForm("SubmitComment", "Apps", new AjaxOptions { UpdateTargetId = "NewComment" }))
+{
+    <div>
+        @Html.HiddenFor(x => x.ParentId)
+        @Html.HiddenFor(x => x.LessonId)
+        @Html.ValidationSummary(true, "Comment submission failed. Check details.")
+    </div>
+    <div class="editor-label">
+                @Html.LabelFor(u => u.CommentTypeId)
+            </div>
+            <div class="editor-field"> 
+                @Html.DropDownListFor(u => u.CommentTypeId, new SelectList(iTotzke.Composites.Comment.CommentTypeList, "value",  "text", 2))
+                @Html.ValidationMessageFor(u => u.CommentTypeId)
+            </div>
+    <div class="editor-label">
+        @Html.LabelFor(u => u.CommentText)
+    </div>
+    <div class="editor-field">
+        @Html.TextAreaFor(u => u.CommentText)
+        @Html.ValidationMessageFor(u => u.CommentText)
+    </div>
+    <input type="submit" value="Submit"/>                     
+}
+
+

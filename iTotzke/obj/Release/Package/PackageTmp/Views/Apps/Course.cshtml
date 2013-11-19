@@ -1,0 +1,23 @@
+﻿@using iTotzke.Composites
+@using iTotzke.Utilites
+
+@{
+    ViewBag.Title = "Course";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<ol class="breadcrumb">
+  <li>@Html.ActionLink("ContraClass", "ContraClass")</li>
+  <li>@Html.ActionLink((string)ContraClass.GetSubjectNameById(Convert.ToInt32(ViewBag.course.SubjectId)), "Subject", new {ID=ViewBag.course.SubjectId}, null)</li>
+  <li class="active">@ViewBag.course.CourseName </li>
+</ol>
+<h2>@ViewBag.course.CourseName</h2>
+<br/>
+@Html.ActionLink("Create a Class", "CreateCourse","Apps")
+<br />
+
+@foreach (Lesson c in ViewBag.AllLessons)
+{
+    @Html.ActionLink( String.IsNullOrEmpty( c.SectionName)? c.LessonName:c.SectionName +":" + c.LessonName, "Lesson", "Apps", new {id=c.LessonId}, new {})
+    <br />
+}
+@Html.ActionLink("Create a Lesson", "CreateLesson", "Apps", new {ID = ViewBag.course.CourseId}, null)

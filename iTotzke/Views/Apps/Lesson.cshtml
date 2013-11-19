@@ -1,0 +1,32 @@
+﻿@using System.Text.RegularExpressions
+@using System.Web.UI.WebControls
+@using iTotzke.Utilites
+
+@{
+    ViewBag.Title = "Lesson";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<ol class="breadcrumb">
+  <li>@Html.ActionLink("ContraClass", "ContraClass")</li>
+  <li>@Html.ActionLink((string)ContraClass.GetSubjectNameById(Convert.ToInt32(ViewBag.lesson.SubjectId)), "Subject", new {ID=ViewBag.lesson.SubjectId}, null)</li>
+  <li>@Html.ActionLink((string)ViewBag.lesson.CourseName , "Course", new {ID= ViewBag.lesson.CourseId}, null)</li>
+  <li class="active">@ViewBag.lesson.LessonName </li>
+</ol>
+<h2>@( (String.IsNullOrEmpty( ViewBag.lesson.SectionName)? "":ViewBag.lesson.SectionName +": " ) ) @ViewBag.lesson.LessonName</h2>
+@Html.ActionLink("Edit Lesson", "EditLesson","Apps", new { ID=ViewBag.lessonId }, null)
+<br/>
+<div class="UserContent">
+@Html.Raw(String.Format(ViewBag.lesson.LinkTypeHtml, ViewBag.videoId))
+</div>
+@**@
+<br/>
+<a href="@ViewBag.lesson.Link">Direct Link</a>
+<br/>
+@Html.Raw((new FormatUserComment()).FormatMarkdownComment(ViewBag.lesson.LessonText))
+<br/>
+<div class="CommentSection">
+    @Html.Partial("Comments")
+</div>
+@*ViewBag.lesson.LessonText*@
+<br/>
+

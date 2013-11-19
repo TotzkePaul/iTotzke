@@ -1,0 +1,32 @@
+﻿@using System.Diagnostics
+@using iTotzke.Utilites
+@*model iTotzke.Models.CreateLesson*@
+@model System.Web.Mvc.HandleErrorInfo
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Error";
+    try
+    {
+        Logger logger = new Logger();
+        //Exception ex = Server.GetLastError();
+        string userName = User.Identity.Name;
+        if (userName != null && userName.Length == 0)
+        {
+            userName = null;
+        }
+        if (Model != null)
+        {
+            Exception ex = Model.Exception;
+            ViewBag.ErrorLogged = logger.Add(ex, ex.Message, ex.Source, userName);
+        }
+        else
+        {
+            ViewBag.ErrorLogged = false;
+        }
+
+    }
+    catch (Exception ex)
+    {
+        Debugger.Break();
+    }
+}

@@ -1,0 +1,117 @@
+﻿@using iTotzke.Composites;
+@using itotzke.Database
+@{
+    ViewBag.Title = "Admin Index";
+}
+
+<h2>Index</h2>
+
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<section class="Admin">
+    <label>Password: <input id="password" type="text"/></label> <br/> <br/> <br/> <br/>
+    <label>Area:  <input id="ContentArea" type="text"/></label><br/>
+    <label>Title: <input id="ContentName" type="text"/></label>
+    <textarea style="margin-left: 42px" id="ContentText"></textarea> <br/>
+    <input id="SubmitContent" type="button" value="Submit" />
+    
+    <br/> <br/>
+    <div id="tabs" data-tabs="true">
+        <ul>
+            <li><a href="#ContentsTab">Contents</a></li>
+            <li><a href="#UsersTab">Users</a></li>
+            <li><a href="#LogsTab">Logs</a></li>
+        </ul>
+        <div id="ContentsTab">
+            <table id="ContentTable" data-table="true; fnRowCallback:Admin.ContentCallback; bLengthChange:false">
+	            <thead>
+	                <tr>
+	                    <th class="hidden">Id</th>
+	                    <th>Area</th>
+	                    <th>Name</th>
+	                    <th>Text</th>
+	                    <th data-table-class="edit" data-table-width="1px" data-table-sort="false"></th>
+	                    <th data-table-class="delete" data-table-width="1px" data-table-sort="false"></th>
+	                </tr>
+	            </thead>
+                <tbody>
+                    @foreach (Content c in ViewBag.AllContent)
+                    {
+                        <tr class="">
+                            <td class="hidden">@c.ContentId</td>
+                            <td>@c.ContentArea</td>
+                            <td> @c.ContentName </td>
+                            <td>@c.ContentText</td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                    }
+                </tbody>
+        
+            </table>
+        </div>
+        <div id="UsersTab">
+            <table id="UsersTable" data-table="true;fnRowCallback:Admin.UserCallback; bLengthChange:false">
+	            <thead>
+	                <tr>
+	                    <th class="hidden">Id</th>
+	                    <th>Name</th>
+	                    <th>Type</th>
+	                    <th data-table-class="edit" data-table-width="1px" data-table-sort="false"></th>
+	                    <th data-table-class="delete" data-table-width="1px" data-table-sort="false"></th>
+	                </tr>
+	            </thead>
+                <tbody>
+                    @foreach (User user in ViewBag.AllUsers)
+                    {
+                        <tr class="">
+                            <td class="hidden">@user.UserId</td>
+                            <td>@user.Username</td>
+                            <td> @user.Type </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                    }
+                </tbody>
+        
+            </table>
+        </div>
+        <div id="LogsTab">
+            <table id="LogsTable" data-table="true;fnRowCallback:Admin.LogCallback; bLengthChange:false">
+	            <thead>
+	                <tr>
+	                    <th class="hidden">Id</th>
+	                    <th>Type</th>
+                        <th>Message </th>
+                        <th>Location</th>
+                        <th>LogTime</th>
+	                    <th data-table-class="edit" data-table-width="1px" data-table-sort="false"></th>
+	                    <th data-table-class="delete" data-table-width="1px" data-table-sort="false"></th>
+	                </tr>
+	            </thead>
+                <tbody>
+                    @foreach (Log log in ViewBag.AllLogs)
+                    {
+                        <tr class="">
+                            <td class="hidden">@log.LogId</td>
+                            <td>@log.Type</td>
+                            <td> @log.Message </td>
+                            <td>@log.Location</td>
+                            <td>@log.LogTime</td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</section>
+
+
+@Scripts.Render("~/Scripts/admin.js")

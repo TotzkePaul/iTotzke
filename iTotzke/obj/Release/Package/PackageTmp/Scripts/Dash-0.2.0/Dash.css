@@ -1,0 +1,5 @@
+/* Query UI CSS */
+@import url("ui/smoothness/jquery-ui-1.8.16.custom.css");
+
+/* Timepicker Addon CSS */
+@import url("ui/TimepickerAddon/jquery-ui-timepicker-addon.css");

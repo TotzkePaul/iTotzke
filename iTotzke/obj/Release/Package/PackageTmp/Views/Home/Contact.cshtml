@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<section class="contact">
+    <header>
+        <h3>Email</h3>
+    </header>
+    <p>
+        <span class="label">Support:</span>
+        <span><a href="@ViewBag.emailSupport">@ViewBag.emailSupport </a></span>
+    </p>
+    <p>
+        <span class="label">Marketing:</span>
+        <span><a href="@ViewBag.emailMarketing">@ViewBag.emailMarketing</a></span>
+    </p>
+    <p>
+        <span class="label">General:</span>
+        <span><a href="@ViewBag.emailGeneral">@ViewBag.emailGeneral</a></span>
+    </p>
+</section>

@@ -1,0 +1,147 @@
+﻿    <li id="UserDropdownForm" class="dropdown ">
+        @model iTotzke.Models.User
+        <a href="#" class="dropdown-toggle " data-toggle="dropdown">
+            @if (ViewBag.Username != null)
+            {
+                @ViewBag.Username
+            }
+            else
+            {
+                @Html.Encode(User.Identity.Name)
+            }
+            <i class="caret"></i>
+        </a>
+        <ul class="dropdown-menu">
+            @using (Ajax.BeginForm("SimpleLogout", "User", new AjaxOptions { UpdateTargetId = "UserArea" }))
+            {
+                <li class=" ">
+                    <span class="visible-lg visible-md visible-sm">
+                        @if (ViewBag.Username != null)
+                        {
+                            @ViewBag.Username
+                        }
+                        else
+                        {
+                            @Html.Encode(User.Identity.Name)
+                        }
+                    </span>
+                </li>
+                <li class="divider visible-lg visible-md visible-sm"></li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-envelope"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index", "Settings")">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a onclick=" $(this).parents('form:first').submit(); "  @*href="@Url.Action("Logout", "User")"*@>
+                        <i class="glyphicon glyphicon-off"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            }
+        </ul>
+    </li>
+
+@*onclick="$(this).parents('form:first').submit();"*@
+@*
+@model iTotzke.Models.User
+<li id="UserLoginForm" class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+        <li>
+            <div class="input-prepend">
+                @using (Ajax.BeginForm("Login", "User", new AjaxOptions
+                {
+                    UpdateTargetId = "UserArea"
+                }))
+                {
+                    @Html.ValidationSummary(true, "Login failed. Check your login details.");
+                    <div style="width:175px;">
+                        <fieldset>
+                            <legend>Login</legend>
+                            <div class="editor-label">
+                                @Html.LabelFor(u => u.UserName)
+                            </div>
+                            <div class="editor-field">
+                                @Html.TextBoxFor(u => u.UserName, new {placeholder="User Name"})
+                                @Html.ValidationMessageFor(u => u.UserName)
+                            </div>
+                            <div class="editor-label">
+                                @Html.LabelFor(u => u.Password)
+                            </div>
+                            <div class="editor-field">
+                                @Html.PasswordFor(u => u.Password, new {placeholder="Password"})
+                                @Html.ValidationMessageFor(u => u.Password)
+                            </div>
+                            <div class="editor-label">
+                                @Html.CheckBoxFor(u => u.RememberMe)
+                                @Html.LabelFor(u => u.RememberMe)
+                            </div>
+                            <input id="btnUserLogin" style="display: inline" class="btn btn-default" type="submit" value="Log In" />
+                            <input style="display: inline" class="btn btn-default" type="button" onclick="location.href=@Url.Action("Register", "User")" value="Register"  />                     
+            
+                        </fieldset>
+                        <div>
+                            <br />
+                            @Html.ActionLink("Register", "Register", "User")
+                            @Html.ActionLink("Forgot Login?", "Recover", "User")
+                        </div>
+                    </div>
+                }
+            </div>
+        </li>
+    </ul>
+</li>
+*@
+
+@*
+<script type="text/javascript">
+    $(function () {
+        $('form').submit(function () {
+            if ($(this).valid()) {
+                $.ajax({
+                    url: this.action,
+                    type: this.method,
+                    data: $(this).serialize(),
+                    success: function (result) {
+                        $('#UserLoginForm').html(result);
+                    }
+                });
+            }
+            return false;
+        });
+    });
+
+</script>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="input-prepend">
+                                                <form>
+                                                    <input class="span2" type="text" placeholder="Email"  />
+                                                    <input class="span2" type="password" placeholder="Password" />
+                                                    <button type="submit" class="btn btn-default" style="display: inline">Sign in</button>
+                                                    <button type="submit" class="btn btn-default" style="display: inline">Register</button>
+                                                    @Html.ActionLink("Register", "Register", "User")
+                                                    @Html.ActionLink("Sign In", "Login", "User")
+                                                </form>
+                                                <!-- { Html.RenderAction("Login", "User"); }-->
+                                                 
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>*@
