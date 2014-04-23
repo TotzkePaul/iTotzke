@@ -11,6 +11,12 @@ using MarkovChainTextBox;
 
 namespace MarkovChainTextBox
 {
+    /**
+     * MARKOV CHAIN GENERATOR IN .NET was created by Noldorin
+     * 
+     * Source: http://blog.noldorin.com/2010/02/markov-chain-generator-in-net/
+     */
+
     // Represents a Markov chain of arbitrary length.
     [DebuggerDisplay("{this.nodes.Count} nodes")]
     public class MarkovChain<T>
