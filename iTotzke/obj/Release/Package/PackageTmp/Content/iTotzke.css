@@ -58,3 +58,7 @@ border-color:#909090 ;
 background: #D0D0D0      ;
 }
 .bold {font-weight:bold; color: blue }
+.CommentWrapper .Even { background-color: #EEE}
+.CommentWrapper .Odd { background-color: white}
+.CommentWrapper {padding-left: 10px; padding-right: 10px;}
+.CommentArea {margin-left:20px; padding-left: 10px;}

@@ -7,8 +7,9 @@
 @using (Ajax.BeginForm("SubmitComment", "Apps", new AjaxOptions { UpdateTargetId = "NewComment" }))
 {
     <div>
-        @Html.HiddenFor(x => x.ParentId, new {id="ParentIdInput"})
+        @Html.HiddenFor(x => x.ParentId)
         @Html.HiddenFor(x => x.LessonId)
+        @Html.ValidationSummary(true, "Comment submission failed. Check details.")
     </div>
     <div class="editor-label">
                 @Html.LabelFor(u => u.CommentTypeId)

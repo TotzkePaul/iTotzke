@@ -9,8 +9,8 @@ var Core = new function() {
     this.Init = function() {
         $.fn.dash();
     };
-    
-    this.getBaseURL = function () {
+
+    this.getBaseURL = function() {
         var baseUrl = "";
         var baseDocument = "index.html";
 
@@ -22,6 +22,18 @@ var Core = new function() {
 
         return baseUrl;
 
-    }
-    
+    };
+
+    this.ReplyToComment = function (input, commentId) {
+        var clone = $('#NewComment > .CommentArea > form').clone();
+        $("input[name='ParentId']", clone).val(commentId);
+        $(input).append(clone);
+        $(input).removeAttr('onclick');
+        $(this).parents('form:first');
+        
+        
+        //$('div').removeClass('highlight');
+        //$('div[data-comment-id=' + commentId + ']').addClass('highlight');
+    };
+
 };

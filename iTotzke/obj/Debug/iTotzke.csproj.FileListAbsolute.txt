@@ -30,4 +30,3 @@ C:\Users\Paul\documents\visual studio 2012\Projects\iTotzke\iTotzke\bin\System.W
 C:\Users\Paul\documents\visual studio 2012\Projects\iTotzke\iTotzke\bin\System.Web.WebPages.Razor.xml
 C:\Users\Paul\documents\visual studio 2012\Projects\iTotzke\iTotzke\obj\Debug\iTotzke.dll
 C:\Users\Paul\documents\visual studio 2012\Projects\iTotzke\iTotzke\obj\Debug\iTotzke.pdb
-C:\Users\Paul\documents\visual studio 2012\Projects\iTotzke\iTotzke\obj\Debug\iTotzke.csprojResolveAssemblyReference.cache

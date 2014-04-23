@@ -9,6 +9,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <LastUsedPlatform>Any CPU</LastUsedPlatform>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/1AkJIWmhkKFK+jk5X9sygAAAAACAAAAAAAQZgAAAAEAACAAAAAbnx886zJNyi5wMg/GNPa819+D47QG01uZ4/9ES2hjrwAAAAAOgAAAAAIAACAAAABcq0qO5rq4mss/cmn1PMJvaUcLFodBYQZSnmVZxEXL5CAAAACBclEShZ3IYEGX+S2DZ0mYGX4yd25o0YeR26SO0j+AIUAAAACy17W70y/sXjFRhm6gVHgg2QntKlITjTtITq+o9mV3nWUrZl3Xnxox1qxHaXbiDxZ6w41Ye6LlTXyPzKCJhxKW</EncryptedPassword>
+    <_PublishTargetUrl>ftp://itotzke.com</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="AdminService.asmx">
@@ -27,7 +28,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/29/2013 23:20:10</publishTime>
     </File>
     <File Include="bin/iTotzke.dll">
-      <publishTime>11/14/2013 01:00:13</publishTime>
+      <publishTime>04/23/2014 01:15:31</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>09/29/2013 23:20:18</publishTime>
@@ -426,7 +427,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/23/2013 09:38:44</publishTime>
     </File>
     <File Include="Content/iTotzke.css">
-      <publishTime>11/14/2013 00:09:41</publishTime>
+      <publishTime>11/15/2013 00:54:09</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>11/06/2013 01:26:17</publishTime>
@@ -601,6 +602,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/tools.css">
       <publishTime>10/08/2013 19:16:24</publishTime>
+    </File>
+    <File Include="Database/MarkovDB.txt">
+      <publishTime>04/23/2014 01:14:45</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>09/29/2013 23:20:07</publishTime>
@@ -870,7 +874,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/07/2013 00:38:03</publishTime>
     </File>
     <File Include="Scripts/Core.js">
-      <publishTime>10/07/2013 22:36:07</publishTime>
+      <publishTime>11/15/2013 01:09:11</publishTime>
     </File>
     <File Include="Scripts/Dash-0.2.0/Dash-0.2.1.js">
       <publishTime>10/05/2013 15:13:09</publishTime>
@@ -1097,8 +1101,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/knockout-2.1.0.js">
       <publishTime>09/29/2013 23:20:23</publishTime>
     </File>
+    <File Include="Scripts/LiveEssay.js">
+      <publishTime>04/20/2014 23:30:31</publishTime>
+    </File>
     <File Include="Scripts/modernizr-2.5.3.js">
       <publishTime>09/29/2013 23:20:18</publishTime>
+    </File>
+    <File Include="Scripts/tas.js">
+      <publishTime>01/17/2014 22:52:53</publishTime>
     </File>
     <File Include="Scripts/tools.js">
       <publishTime>10/10/2013 23:32:15</publishTime>
@@ -1119,7 +1129,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/27/2013 14:40:26</publishTime>
     </File>
     <File Include="Views/Apps/Comments.cshtml">
-      <publishTime>11/13/2013 23:49:08</publishTime>
+      <publishTime>11/15/2013 01:02:48</publishTime>
     </File>
     <File Include="Views/Apps/ContraClass.cshtml">
       <publishTime>11/04/2013 23:18:19</publishTime>
@@ -1145,6 +1155,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Apps/Lesson.cshtml">
       <publishTime>11/12/2013 13:55:15</publishTime>
     </File>
+    <File Include="Views/Apps/LiveEssay.cshtml">
+      <publishTime>04/22/2014 23:53:35</publishTime>
+    </File>
     <File Include="Views/Apps/Monotone.cshtml">
       <publishTime>11/05/2013 22:09:56</publishTime>
     </File>
@@ -1152,10 +1165,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/11/2013 22:50:35</publishTime>
     </File>
     <File Include="Views/Apps/SubmitComment.cshtml">
-      <publishTime>11/14/2013 00:58:37</publishTime>
+      <publishTime>11/15/2013 01:01:22</publishTime>
     </File>
     <File Include="Views/Apps/TileAssembly.cshtml">
-      <publishTime>10/27/2013 13:48:25</publishTime>
+      <publishTime>01/28/2014 14:34:58</publishTime>
     </File>
     <File Include="Views/Carly.cshtml">
       <publishTime>09/29/2013 23:26:35</publishTime>
@@ -1179,7 +1192,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/23/2013 00:09:32</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/06/2013 01:24:43</publishTime>
+      <publishTime>01/28/2014 14:35:04</publishTime>
     </File>
     <File Include="Views/Index.cshtml">
       <publishTime>09/29/2013 23:26:35</publishTime>
@@ -1239,7 +1252,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/24/2013 12:54:02</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/14/2013 01:00:20</publishTime>
+      <publishTime>01/28/2014 14:35:28</publishTime>
     </File>
     <File Include="WebServices/AdminService.asmx">
       <publishTime>10/02/2013 00:48:21</publishTime>

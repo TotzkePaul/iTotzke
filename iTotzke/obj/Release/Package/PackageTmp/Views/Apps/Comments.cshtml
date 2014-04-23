@@ -3,40 +3,42 @@
 @using iTotzke.Composites
 @using iTotzke.Models
 
-<div id="NewComment">
+<div id="NewComment" class="CommentWrapper Odd">
+    <h3>Comments:</h3>
     @if (ViewBag.comments == null)
     {
         <div>No Comments Available. </div>
     }
     else
     {
-    @helper ShowTree(List<Comment> comments)
-        {
-            <div class="CommentWrapper">
-                @foreach (Comment foo in comments)
-                {
-                    <div class="Username @foo.Username bold">
-                        @foo.Username
-                    </div>
-                    <div class="CommentText" data-comment-id="@foo.CommentId">
-                        @foo.CommentText
-                    </div>
-                    <div>
-                        <a onclick="$('#ParentIdInput').val(@foo.CommentId); $('div').removeClass('highlight');$('div[data-comment-id=@foo.CommentId]').addClass('highlight');">Reply</a>
-                    </div>
-                    <div class="CommentChildren">      
-                        @if (foo.ChildComments != null && foo.ChildComments.Any())
-                        {
-                            @ShowTree(foo.ChildComments)
-                        }
-                    </div>
-                }
-            </div><br/>
-        }
-        
-        @ShowTree(ViewBag.comments)
-        <a onclick="$('#ParentIdInput').val(null); $('div').removeClass('highlight');">Create New Thread</a>
-        @Html.Partial("SubmitComment", new LessonComment(){LessonId= ViewBag.lessonId})
+    @helper ShowTree(List<Comment> comments, bool flip)
+    {
+            
+        <div class="CommentWrapper @(flip?"Even":"Odd")">
+            @foreach (Comment foo in comments)
+            {
+                <div class="Username @foo.Username bold">
+                    @foo.Username
+                </div>
+                <div class="CommentText" data-comment-id="@foo.CommentId">
+                    @foo.CommentText
+                </div>
+                <div>
+                    <a onclick="Core.ReplyToComment(this, @foo.CommentId);">Reply</a>
+                </div>
+                <div class="CommentChildren">      
+                    @if (foo.ChildComments != null && foo.ChildComments.Any())
+                    {
+                        @ShowTree(foo.ChildComments, !flip)
+                    }
+                </div>
+            }
+        </div><br/>
+    }
+        <div class="CommentArea">
+            @ShowTree(ViewBag.comments, false)
+            @Html.Partial("SubmitComment", new LessonComment(){LessonId= ViewBag.lessonId})
+        </div>
     }
     
 </div>

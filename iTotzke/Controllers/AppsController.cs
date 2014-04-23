@@ -110,6 +110,12 @@ namespace iTotzke.Controllers
             return View();
         }
 
+        public ActionResult LiveEssay()
+        {
+            return View();
+        }
+
+        [Authorize(Users="totzke")]
         public ActionResult TileAssembly()
         {
             return View();

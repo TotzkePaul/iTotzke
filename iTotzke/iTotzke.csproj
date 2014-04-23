@@ -254,6 +254,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\tools.css" />
+    <Content Include="Database\MarkovDB.txt" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
@@ -305,7 +306,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\LiveEssay.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\tas.js" />
     <Content Include="Scripts\tools.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="WebServices\AdminService.asmx" />
@@ -391,6 +394,7 @@
     <Content Include="Views\Error\Index.cshtml" />
     <Content Include="Views\Apps\Comments.cshtml" />
     <Content Include="Views\Apps\SubmitComment.cshtml" />
+    <Content Include="Views\Apps\LiveEssay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -414,7 +418,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>53824</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:51914/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
