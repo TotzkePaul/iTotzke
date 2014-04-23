@@ -1,0 +1,30 @@
+﻿@using itotzke.Utilites
+@{
+    ViewBag.Title = "LiveEssay";
+}
+
+<h2>LiveEssay</h2>
+<div>
+    Rate your beliefs:
+    <div style="padding-left:20px;">
+        <input type="radio" name="GodScale" /> <span><b>Strong theist.</b> know that god exists 100% - Jung: "I do not believe, I know."</span><br />
+        <input type="radio" name="GodScale" /> <span><b>De facto theist.</b>Very high probability but short of 100%. "So probable that I live my life accordingly."</span><br />
+        <input type="radio" name="GodScale" /> <span><b>Leaning towards theism.</b> Higher than 50 per cent but not very high. "I am very uncertain, but I am inclined to believe in God."</span><br />
+        <input type="radio" name="GodScale" /> <span><b>Completely impartial.</b> Exactly 50 per cent. "God's existence and non-existence are exactly equiprobable."</span><br />
+        <input type="radio" name="GodScale" /> <span><b>Leaning towards Agnosticism.</b> Lower than 50 per cent but not very low. "I do not know whether God exists but I'm inclined to be skeptical."</span><br />
+        <input type="radio" name="GodScale" /> <span><b>De facto atheist.</b> Very low probability, but not zero. "So improbable that I live my life on the assumption that he is not there."</span><br />
+        <input type="radio" name="GodScale" /> <span><b>Strong atheist.</b> "I know there is no God, with the same conviction as Jung knows there is one."</span><br />
+    </div> 
+</div>
+<br />
+<div id="Essay">
+    
+</div>
+
+<div>
+    <div style="padding-left:20px;">
+        @Html.Raw(Carly.response("ye"))
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/LiveEssay.js")
