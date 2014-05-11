@@ -28,7 +28,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/29/2013 23:20:10</publishTime>
     </File>
     <File Include="bin/iTotzke.dll">
-      <publishTime>04/23/2014 01:15:31</publishTime>
+      <publishTime>04/25/2014 11:20:05</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>09/29/2013 23:20:18</publishTime>
@@ -603,6 +603,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/tools.css">
       <publishTime>10/08/2013 19:16:24</publishTime>
     </File>
+    <File Include="Database/markov00.dat">
+      <publishTime>04/24/2014 00:52:29</publishTime>
+    </File>
     <File Include="Database/MarkovDB.txt">
       <publishTime>04/23/2014 01:14:45</publishTime>
     </File>
@@ -1156,7 +1159,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/12/2013 13:55:15</publishTime>
     </File>
     <File Include="Views/Apps/LiveEssay.cshtml">
-      <publishTime>04/22/2014 23:53:35</publishTime>
+      <publishTime>04/25/2014 11:20:02</publishTime>
     </File>
     <File Include="Views/Apps/Monotone.cshtml">
       <publishTime>11/05/2013 22:09:56</publishTime>
@@ -1192,7 +1195,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/23/2013 00:09:32</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>01/28/2014 14:35:04</publishTime>
+      <publishTime>04/25/2014 01:08:07</publishTime>
     </File>
     <File Include="Views/Index.cshtml">
       <publishTime>09/29/2013 23:26:35</publishTime>

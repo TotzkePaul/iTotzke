@@ -115,6 +115,23 @@ namespace iTotzke.Controllers
             return View();
         }
 
+        public ActionResult Polyglot()
+        {
+            return View();
+        }
+
+        public ActionResult Language()
+        {
+            int id = Convert.ToInt32(this.ControllerContext.RouteData.Values["id"]);
+            
+
+            Language language = db.RunListProcedure<Language>("SelectLanguageById", new { languageId = id }).First();
+            Lesson lesson = db.RunProcedure<Lesson>("SelectLessonById", new { lessonId = id });
+            ViewBag.AllLessons = db.RunListProcedure<Lesson>("SelectAllLessonsByCourseId", new { courseId = id });
+            // finish me
+            return View();
+        }
+
         [Authorize(Users="totzke")]
         public ActionResult TileAssembly()
         {

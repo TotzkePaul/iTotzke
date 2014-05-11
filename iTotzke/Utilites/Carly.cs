@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using itotzke.Database;
+using iTotzke.Database;
 using MarkovChainTextBox;
 
 namespace MarkovChainTextBox
@@ -114,44 +115,70 @@ namespace itotzke.Utilites
 {
     public class Carly
     {
-        public static MarkovChain<string> myMarkovChain = null; 
+        public static MarkovChain<string> myMarkovChain = null;
+        public static string[] sentences = null;
         public static string MarkovGenerator(string input)
         {
             if (myMarkovChain == null)
             {
+                
+                    StringBuilder sb = new StringBuilder();
+                    using (StreamReader sr = new StreamReader(HttpRuntime.AppDomainAppPath + "Database/MarkovDB.txt"))
+                    {
+                        String line;
+                        // Read and display lines from the file until the end of 
+                        // the file is reached.
+                        while ((line = sr.ReadLine()) != null)
+                        {
+                            sb.AppendLine(line);
+                        }
+                    }
+                    var mc = new MarkovChain<string>();
 
-                StringBuilder sb = new StringBuilder();
-                using (StreamReader sr = new StreamReader(HttpRuntime.AppDomainAppPath + "Database/MarkovDB.txt"))
+                    string sampleText = sb.ToString().ToLower();
+                    sentences = sampleText.Split(new char[] {'?', '.', '!', ';'},
+                        StringSplitOptions.RemoveEmptyEntries);
+                    FileDb.WriteObj<String[]>("markov00.dat", sentences);
+                    foreach (string sentence in sentences)
+                    {
+
+                        string[] words = sentence.Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries);
+                        if (words.Length < 2)
+                        {
+                            continue;
+                        }
+                        for (int i = 0; i < words.Length - 1; i++)
+                        {
+                            mc.Train(words[i], words[i + 1]);
+                        }
+                        mc.Train(default(string), words[0]);
+                        mc.Train(words[words.Length - 1], ".");
+                    }
+                    myMarkovChain = mc;
+                
+                /** optional ELSE
                 {
-                    String line;
-                    // Read and display lines from the file until the end of 
-                    // the file is reached.
-                    while ((line = sr.ReadLine()) != null)
+                    var mc = new MarkovChain<string>();
+                    sentences = FileDb.ReadObj<String[]>("markov00.dat");
+                    foreach (string sentence in sentences)
                     {
-                        sb.AppendLine(line);
-                    }
-                }
-                var mc = new MarkovChain<string>();
 
-                string sampleText = sb.ToString().ToLower();
-                string[] sentences = sampleText.Split(new char[] { '?', '.', '!', ';' }, StringSplitOptions.RemoveEmptyEntries);
-                foreach (string sentence in sentences)
-                {
-
-                    string[] words = sentence.Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries);
-                    if (words.Length < 2)
-                    {
-                        continue;
+                        string[] words = sentence.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                        if (words.Length < 2)
+                        {
+                            continue;
+                        }
+                        for (int i = 0; i < words.Length - 1; i++)
+                        {
+                            mc.Train(words[i], words[i + 1]);
+                        }
+                        mc.Train(default(string), words[0]);
+                        mc.Train(words[words.Length - 1], ".");
                     }
-                    for (int i = 0; i < words.Length - 1; i++)
-                    {
-                        mc.Train(words[i], words[i + 1]);
-                    }
-                    mc.Train(default(string), words[0]);
-                    mc.Train(words[words.Length - 1], ".");
-                }
-                myMarkovChain = mc;
+                    myMarkovChain = mc;
+                }*/
             }
+            
 
             IEnumerable<string> t = myMarkovChain.GenerateSequence();
             string retVal = String.Join(" ", t.ToArray());

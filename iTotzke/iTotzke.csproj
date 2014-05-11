@@ -126,15 +126,18 @@
     <Compile Include="Composites\Comment.cs" />
     <Compile Include="Composites\Content.cs" />
     <Compile Include="Composites\Course.cs" />
+    <Compile Include="Composites\Language.cs" />
     <Compile Include="Composites\Lesson.cs" />
     <Compile Include="Composites\LinkType.cs" />
     <Compile Include="Composites\Log.cs" />
+    <Compile Include="Composites\Module.cs" />
     <Compile Include="Composites\User.cs" />
     <Compile Include="Controllers\AppsController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="Controllers\ToolsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Database\FileDb.cs" />
     <Compile Include="Models\ContentPage.cs" />
     <Compile Include="Models\CreateCourse.cs" />
     <Compile Include="Models\CreateLesson.cs" />
@@ -344,6 +347,7 @@
     <Content Include="Content\font-awesome\scss\_spinning.scss" />
     <Content Include="Content\font-awesome\scss\_stacked.scss" />
     <Content Include="Content\font-awesome\scss\_variables.scss" />
+    <Content Include="Database\markov00.dat" />
     <None Include="Properties\PublishProfiles\Dev.pubxml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -395,6 +399,8 @@
     <Content Include="Views\Apps\Comments.cshtml" />
     <Content Include="Views\Apps\SubmitComment.cshtml" />
     <Content Include="Views\Apps\LiveEssay.cshtml" />
+    <Content Include="Views\Apps\Polyglot.cshtml" />
+    <Content Include="Views\Apps\Language.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
