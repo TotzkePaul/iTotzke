@@ -1,0 +1,302 @@
+﻿@{
+    ViewBag.Title = "Example";
+}
+
+<h2>Example</h2>
+
+<style>
+    .juibutton {
+        height: 25px;
+        width: 25px;
+        display: inline-block;
+    }
+</style>
+<script>
+    
+    $(document).ready(function () {
+        
+        DefaultNS.Init();
+        //jQuery.noConflict();
+       
+        $("#myInput").button({
+            text: false,
+            icons: { primary: "ui-icon-trash" }
+        });
+        $("#myA").button({
+            text: false,
+            icons: { primary: "ui-icon-trash" }
+        });
+        $("#myButton").button({
+            text: false,
+            icons: { primary: "ui-icon-trash" }
+        });
+    });
+
+    var DefaultNS = new function () {
+        this.Init = function () {
+
+        };
+
+        this.ExampleCallback = function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+
+            
+            var viewButton = $("<button class='juibutton'>view</button>");
+            $(viewButton).button({
+                icons: {
+                    primary: "ui-icon-locked"
+                },
+                text: false
+            });
+        
+            var editButton = $("<button class='juibutton'>edit</button>");
+            $(editButton).button({
+                text: false,
+                icons: { primary: "ui-icon-pencil" }
+            });
+       
+
+            var delButton = $("<button class='juibutton'>delete</button>").button({
+                text: false,
+                icons: { primary: "ui-icon-trash" }
+            });
+
+            $(".viewButton", nRow).empty().append(viewButton);
+            $(".editButton", nRow).empty().append(editButton);
+            $(".deleteButton", nRow).empty().append(delButton);
+            return nRow;
+        };
+
+    }
+</script>
+<button id="myButton">A button element</button>
+
+<input id="myInput" type="submit" value="A submit button">
+
+<a id="myA" href="#">An anchor</a>
+
+    <table id='ExampleTable' data-table='true; fnRowCallback:DefaultNS.ExampleCallback; bLengthChange:false'>
+        <thead>
+            <tr>
+                <th data-table-class='hidden'>Id</th>
+                <th>Name</th>
+                <th>Text</th>
+                <th data-table-class='viewButton' data-table-width='1px' data-table-sort='false'></th>
+                <th data-table-class='editButton' data-table-width='1px' data-table-sort='false'></th>
+                <th data-table-class='deleteButton' data-table-width='1px' data-table-sort='false'></th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Uncomment for C# Razor syntax-->
+            <tr>
+                <td>98</td>
+                <td>IMVZa8nz</td>
+                <td>TBUIVszh</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>268</td>
+                <td>zhI7CXAe</td>
+                <td>4a6XwfmZ</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>88</td>
+                <td>bnHKmnlj</td>
+                <td>7vUInYUW</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>68</td>
+                <td>j4vR064B</td>
+                <td>RfP2h1sh</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>502</td>
+                <td>QVPReV2e</td>
+                <td>bmiFU1v1</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>894</td>
+                <td>VQLzOn2z</td>
+                <td>Lj833dpZ</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>487</td>
+                <td>51PjN4Qn</td>
+                <td>92DT9oZS</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>40</td>
+                <td>DKWN0GTn</td>
+                <td>yU4xsrOG</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>400</td>
+                <td>zYq7BgmL</td>
+                <td>DKIJIlmM</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>70</td>
+                <td>1MP7Wc8r</td>
+                <td>QBONlKPR</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>651</td>
+                <td>UQuDc2lT</td>
+                <td>VP6OrnHJ</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>836</td>
+                <td>yHpyQSrX</td>
+                <td>654veEJ9</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>242</td>
+                <td>atI3XReH</td>
+                <td>eFIvr2dm</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>774</td>
+                <td>2kERwfl6</td>
+                <td>R64KppY2</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>581</td>
+                <td>IoiZBZ6i</td>
+                <td>6tqmsKzF</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>685</td>
+                <td>bVQrsmGE</td>
+                <td>J1SZxtQk</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>819</td>
+                <td>6PB5yU6A</td>
+                <td>nc2x7OWx</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>138</td>
+                <td>a6BJlciE</td>
+                <td>QWr5gKcp</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>318</td>
+                <td>3QbwKOJq</td>
+                <td>hOGjN5pk</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>280</td>
+                <td>v2v1oi3N</td>
+                <td>77QE7ols</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>339</td>
+                <td>MaLxTR4K</td>
+                <td>ZCl3S7mF</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>855</td>
+                <td>HtvJyiiI</td>
+                <td>LyuhW3nB</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>898</td>
+                <td>PQ0TcSom</td>
+                <td>CdTXJC86</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>863</td>
+                <td>PAsa32CU</td>
+                <td>8cgT2kKm</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>122</td>
+                <td>mAhpJ5fk</td>
+                <td>czI41aTu</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            <!--foreach (Example c in ViewBag.AllExample)
+    {
+                    <tr class=''>
+                        <td data-table-class='hidden'>Id</td>
+                        <td>Name</td>
+                        <td>Text</td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                    </tr>
+            }-->
+        </tbody>
+</table>

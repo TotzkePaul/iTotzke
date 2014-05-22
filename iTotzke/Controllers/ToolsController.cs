@@ -15,6 +15,14 @@ namespace iTotzke.Controllers
         {
             return View();
         }
+        public ActionResult SelectionSaver()
+        {
+            return View();
+        }
 
+        public ActionResult Example()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,14 @@
+﻿@using iTotzke.Composites
+@{
+    ViewBag.Title = "Polyglot";
+}
+
+<h2>Polyglot</h2>
+
+<div>
+@foreach (Language c in ViewBag.AllLanguages)
+{
+    @Html.ActionLink(c.LanguageName, "Language", "Apps", new {id=c.LanguageId}, null)
+    <br />
+}
+</div>

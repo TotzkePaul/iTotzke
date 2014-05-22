@@ -20,7 +20,7 @@
                 <div>
                     <label>Object Name:<input id="ObjectNameText" type="text" value="Example"/></label>
                     <label>JS Namespace:<input id="JsNamespaceText" type="text" value="DefaultNS"/></label>
-                    <input id="ToggleDefault"  class="inline aligntop padsides" type="button" data-button="true" value="Toggle Defaults" /> <br/>
+                    <input id="ToggleDefault" class="inline aligntop padsides" type="button"value="Toggle Defaults" /> <br/>
                     <div id="ExtraControls" style="display: none;">
                         <label class="block"> <input value="default" type="checkbox" name="PrependName" checked="checked"/> Prepend with Object Name</label>
                         Using Statements(C#) <br/>
@@ -33,9 +33,9 @@
                         <textarea id="WebServiceAttr" style="height: 200px;">[WebService(Namespace = "http://tempuri.org/")]&#13;&#10;[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]&#13;&#10;[System.ComponentModel.ToolboxItem(true)]&#13;&#10;[System.Web.Script.Services.ScriptService]</textarea>
                         Callback JScript <br/>
                         <textarea id="CallbackJs" style="height:500px; width: 100%">
-function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {&#13;&#10;       $(".view", nRow).empty();&#13;&#10;        $(".edit", nRow).empty();&#13;&#10;        $(".delete", nRow).empty();&#13;&#10;         var viewButton = $("<a href='#' class='viewButton'></a>").button({&#13;&#10;                text: false,&#13;&#10;                icons: { primary: "ui-icon-search" }&#13;&#10;          });&#13;&#10;        $('.view', nRow).append(viewButton);&#13;&#10;        var editButton = $("<a href='#' class='editButton'></a>").button({&#13;&#10;                text: false,&#13;&#10;                icons: { primary: "ui-icon-pencil" }&#13;&#10;            });&#13;&#10;       $('.edit', nRow).append(editButton);&#13;&#10;&#13;&#10;        var delButton = $("<a href='#' class='deleteButton'></a>").button({&#13;&#10;                text: false,&#13;&#10;                icons: { primary: "ui-icon-trash" }&#13;&#10;            });&#13;&#10;        $('.delete', nRow).append(delButton);&#13;&#10;        return nRow;&#13;&#10;};&#13;&#10;</textarea>
+function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {&#13;&#10;       $(".viewButton", nRow).empty();&#13;&#10;        $(".editButton", nRow).empty();&#13;&#10;        $(".delete", nRow).empty();&#13;&#10;         var viewButton = $("<a href='#' class='viewButton'></a>").button({&#13;&#10;                text: false,&#13;&#10;                icons: { primary: "ui-icon-search" }&#13;&#10;          });&#13;&#10;        $('.viewButton', nRow).append(viewButton);&#13;&#10;        var editButton = $("<a href='#' class='editButton'></a>").button({&#13;&#10;                text: false,&#13;&#10;                icons: { primary: "ui-icon-pencil" }&#13;&#10;            });&#13;&#10;       $('.editButton', nRow).append(editButton);&#13;&#10;&#13;&#10;        var delButton = $("<a href='#' class='deleteButton'></a>").button({&#13;&#10;                text: false,&#13;&#10;                icons: { primary: "ui-icon-trash" }&#13;&#10;            });&#13;&#10;        $('.deleteButton', nRow).append(delButton);&#13;&#10;        return nRow;&#13;&#10;};&#13;&#10;</textarea>
                         <textarea>
-function (nRow) {&#13;&#10;$(".view", nRow).empty();&#13;&#10;        var viewButton = $("<a href='#' class='viewButton'></a>").button({&#13;&#10;            text: false,&#13;&#10;            icons: {&#13;&#10;                primary: "ui-icon-search"            }&#13;&#10;        });&#13;&#10;        $('.view', nRow).append(viewButton);&#13;&#10;        $(".edit", nRow).empty();&#13;&#10;        $(".delete", nRow).empty();&#13;&#10;        var editButton = $("<a href='#' class='editButton'></a>").button({&#13;&#10;            text: false,&#13;&#10;            icons: {&#13;&#10;                primary: "ui-icon-pencil"&#13;&#10;            }&#13;&#10;        });&#13;&#10;        $('.edit', nRow).append(editButton);&#13;&#10;        var delButton = $("<a href='#' class='deleteButton'></a>").button({&#13;&#10;            text: false,&#13;&#10;            icons: {&#13;&#10;                primary: "ui-icon-trash"&#13;&#10;            }&#13;&#10;        });&#13;&#10;        $('.delete', nRow).append(delButton);&#13;&#10;        return nRow;&#13;&#10;    };&#13;&#10;};&#13;&#10;</textarea>
+function (nRow) {&#13;&#10;$(".viewButton", nRow).empty();&#13;&#10;        var viewButton = $("<a href='#' class='viewButton'></a>").button({&#13;&#10;            text: false,&#13;&#10;            icons: {&#13;&#10;                primary: "ui-icon-search"            }&#13;&#10;        });&#13;&#10;        $('.viewButton', nRow).append(viewButton);&#13;&#10;        $(".editButton", nRow).empty();&#13;&#10;        $(".deleteButton", nRow).empty();&#13;&#10;        var editButton = $("<a href='#' class='editButton'></a>").button({&#13;&#10;            text: false,&#13;&#10;            icons: {&#13;&#10;                primary: "ui-icon-pencil"&#13;&#10;            }&#13;&#10;        });&#13;&#10;        $('.editButton', nRow).append(editButton);&#13;&#10;        var delButton = $("<a href='#' class='deleteButton'></a>").button({&#13;&#10;            text: false,&#13;&#10;            icons: {&#13;&#10;                primary: "ui-icon-trash"&#13;&#10;            }&#13;&#10;        });&#13;&#10;        $('.deleteButton', nRow).append(delButton);&#13;&#10;        return nRow;&#13;&#10;    };&#13;&#10;};&#13;&#10;</textarea>
                     </div>
                     <label class="inlineblock aligntop padsides"> <input id="IdCheckbox" value="IdValue" type="checkbox"/> Identifier</label>
                     <div class="inlineblock aligntop padsides">
@@ -61,7 +61,7 @@ function (nRow) {&#13;&#10;$(".view", nRow).empty();&#13;&#10;        var viewBu
                         </select>
                     </label>
                     <label class="inline aligntop padsides"> Property Name:<input id="NameText" type="text"/></label>
-                    <input id="SubmitVar" class="inline aligntop padsides" type="button" data-button="true" value="Add" />
+                    <input id="SubmitVar" class="inline aligntop padsides" type="button" value="Add" />
                 </div>
                 <ul id="sortable">
                     <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s bullet"></span><span class="datainfo" data-info="int Id id">int Id (id)</span></li>
@@ -70,7 +70,7 @@ function (nRow) {&#13;&#10;$(".view", nRow).empty();&#13;&#10;        var viewBu
                 </ul>
                 
                 <div>
-                    <input id="UpdateAll" class="inline aligntop padsides" type="button" data-button="true" value="Update" />
+                    <input id="UpdateAll" class="inline aligntop padsides" type="button" value="Update" />
                 </div> <br /><br /><br />
                 <div style="width: 392px">
                     Directions: Fill in the Data. Id is only useful to the SQL, and inputs for the Web Service. 

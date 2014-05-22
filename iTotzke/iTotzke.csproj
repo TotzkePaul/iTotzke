@@ -256,6 +256,23 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\images\animated-overlay.gif" />
+    <Content Include="Content\themes\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\themes\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\themes\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\themes\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\themes\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\themes\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\themes\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\themes\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\themes\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\themes\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\themes\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\themes\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\jquery-ui-1.10.4.css" />
+    <Content Include="Content\themes\jquery-ui-1.10.4.min.css" />
     <Content Include="Content\tools.css" />
     <Content Include="Database\MarkovDB.txt" />
     <Content Include="Images\accent.png" />
@@ -286,6 +303,8 @@
     <Content Include="Images\orderedList9.png" />
     <Content Include="Scripts\admin.js" />
     <Content Include="Scripts\ai.js" />
+    <Content Include="Scripts\bootstrap-3.1.1.js" />
+    <Content Include="Scripts\bootstrap-3.1.1.min.js" />
     <Content Include="Scripts\Core.js" />
     <Content Include="Scripts\Dash-0.2.0\Dash-0.2.1.js" />
     <Content Include="Scripts\Dash-0.2.0\Dash.css" />
@@ -295,11 +314,10 @@
     <Content Include="Scripts\Dash-0.3.1.js" />
     <Content Include="Scripts\DataTables-1.9.4\media\js\jquery.dataTables.js" />
     <Content Include="Scripts\DataTables-1.9.4\media\js\jquery.dataTables.min.js" />
-    <Content Include="Scripts\jquery-1.7.1.js" />
-    <Content Include="Scripts\jquery-1.7.1.min.js" />
-    <Content Include="Scripts\jquery-ui-1.8.20.js" />
-    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
-    <Content Include="Scripts\jquery-ui-1.9.2.custom.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-ui-1.10.4.js" />
+    <Content Include="Scripts\jquery-ui-1.10.4.min.js" />
     <Content Include="Scripts\jquery.markitup.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
@@ -348,6 +366,7 @@
     <Content Include="Content\font-awesome\scss\_stacked.scss" />
     <Content Include="Content\font-awesome\scss\_variables.scss" />
     <Content Include="Database\markov00.dat" />
+    <Content Include="Content\themes\images\Thumbs.db" />
     <None Include="Properties\PublishProfiles\Dev.pubxml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -401,6 +420,8 @@
     <Content Include="Views\Apps\LiveEssay.cshtml" />
     <Content Include="Views\Apps\Polyglot.cshtml" />
     <Content Include="Views\Apps\Language.cshtml" />
+    <Content Include="Views\Tools\SelectionSaver.cshtml" />
+    <Content Include="Views\Tools\Example.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

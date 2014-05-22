@@ -171,9 +171,9 @@ var Tools = new function () {
             varList += "\t\t\t<th" + prop + ">" + args[i][1] + "</th>\n";
             razorList += "\t\t\t<td"  +prop + ">" + args[i][1] + "</td>\n";
         }
-        varList += "\t\t\t<th" + " data-table-class='view' data-table-width='1px' data-table-sort='false'" + ">" + "</th>\n" +
-                    "\t\t\t<th" + " data-table-class='edit' data-table-width='1px' data-table-sort='false'" + ">" + "</th>\n" +
-                    "\t\t\t<th" + " data-table-class='delete' data-table-width='1px' data-table-sort='false'" + ">"  + "</th>\n";
+        varList += "\t\t\t<th" + " data-table-class='viewButton' data-table-width='1px' data-table-sort='false'" + ">" + "</th>\n" +
+                    "\t\t\t<th" + " data-table-class='editButton' data-table-width='1px' data-table-sort='false'" + ">" + "</th>\n" +
+                    "\t\t\t<th" + " data-table-class='deleteButton' data-table-width='1px' data-table-sort='false'" + ">" + "</th>\n";
         razorList +=    "\t\t\t<td> </td>\n" +
                         "\t\t\t<td> </td>\n" +
                         "\t\t\t<td> </td>\n";

@@ -28,7 +28,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/29/2013 23:20:10</publishTime>
     </File>
     <File Include="bin/iTotzke.dll">
-      <publishTime>04/25/2014 11:20:05</publishTime>
+      <publishTime>05/22/2014 11:45:12</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>09/29/2013 23:20:18</publishTime>
@@ -600,8 +600,62 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/themes/base/minified/jquery.ui.theme.min.css">
       <publishTime>09/29/2013 23:20:16</publishTime>
     </File>
+    <File Include="Content/themes/images/animated-overlay.gif">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/images/Thumbs.db">
+      <publishTime>05/22/2014 02:07:11</publishTime>
+    </File>
+    <File Include="Content/themes/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/images/ui-bg_diagonals-thick_20_666666_40x40.png">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/images/ui-bg_flat_10_000000_40x100.png">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/images/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/images/ui-bg_glass_100_fdf5ce_1x400.png">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/images/ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/images/ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/images/ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/images/ui-icons_222222_256x240.png">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/images/ui-icons_228ef1_256x240.png">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/images/ui-icons_ef8c08_256x240.png">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/images/ui-icons_ffd27a_256x240.png">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/images/ui-icons_ffffff_256x240.png">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/jquery-ui-1.10.4.css">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Content/themes/jquery-ui-1.10.4.min.css">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
     <File Include="Content/tools.css">
-      <publishTime>10/08/2013 19:16:24</publishTime>
+      <publishTime>05/21/2014 23:50:02</publishTime>
     </File>
     <File Include="Database/markov00.dat">
       <publishTime>04/24/2014 00:52:29</publishTime>
@@ -868,7 +922,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/24/2013 12:54:02</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>10/02/2013 22:01:38</publishTime>
+      <publishTime>05/22/2014 11:43:55</publishTime>
     </File>
     <File Include="Scripts/admin.js">
       <publishTime>10/08/2013 10:45:11</publishTime>
@@ -1062,11 +1116,29 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/DataTables-1.9.4/media/js/jquery.js">
       <publishTime>10/02/2013 22:01:26</publishTime>
     </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
     <File Include="Scripts/jquery-1.7.1.js">
       <publishTime>09/29/2013 23:20:12</publishTime>
     </File>
     <File Include="Scripts/jquery-1.7.1.min.js">
       <publishTime>09/29/2013 23:20:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.3.js">
+      <publishTime>05/22/2014 11:43:47</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.8.3.min.js">
+      <publishTime>05/22/2014 11:43:47</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.js">
+      <publishTime>05/22/2014 02:04:37</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.10.4.js">
+      <publishTime>04/02/2014 16:13:18</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.10.4.min.js">
+      <publishTime>04/02/2014 16:13:18</publishTime>
     </File>
     <File Include="Scripts/jquery-ui-1.8.20.js">
       <publishTime>09/29/2013 23:20:15</publishTime>
@@ -1081,10 +1153,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/08/2013 19:26:02</publishTime>
     </File>
     <File Include="Scripts/jquery.unobtrusive-ajax.js">
-      <publishTime>09/29/2013 23:20:18</publishTime>
+      <publishTime>05/22/2014 11:43:47</publishTime>
     </File>
     <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
-      <publishTime>09/29/2013 23:20:18</publishTime>
+      <publishTime>05/22/2014 11:43:47</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
       <publishTime>09/29/2013 23:20:13</publishTime>
@@ -1093,10 +1165,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/29/2013 23:20:13</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.js">
-      <publishTime>09/29/2013 23:20:18</publishTime>
+      <publishTime>05/22/2014 11:43:55</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.min.js">
-      <publishTime>09/29/2013 23:20:18</publishTime>
+      <publishTime>05/22/2014 11:43:55</publishTime>
     </File>
     <File Include="Scripts/knockout-2.1.0.debug.js">
       <publishTime>09/29/2013 23:20:23</publishTime>
@@ -1114,7 +1186,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/17/2014 22:52:53</publishTime>
     </File>
     <File Include="Scripts/tools.js">
-      <publishTime>10/10/2013 23:32:15</publishTime>
+      <publishTime>05/21/2014 20:49:06</publishTime>
     </File>
     <File Include="Scripts/_references.js">
       <publishTime>09/29/2013 23:20:13</publishTime>
@@ -1155,6 +1227,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Apps/Index.cshtml">
       <publishTime>10/23/2013 15:46:55</publishTime>
     </File>
+    <File Include="Views/Apps/Language.cshtml">
+      <publishTime>05/08/2014 02:34:15</publishTime>
+    </File>
     <File Include="Views/Apps/Lesson.cshtml">
       <publishTime>11/12/2013 13:55:15</publishTime>
     </File>
@@ -1163,6 +1238,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Views/Apps/Monotone.cshtml">
       <publishTime>11/05/2013 22:09:56</publishTime>
+    </File>
+    <File Include="Views/Apps/Polyglot.cshtml">
+      <publishTime>05/08/2014 02:36:52</publishTime>
     </File>
     <File Include="Views/Apps/Subject.cshtml">
       <publishTime>11/11/2013 22:50:35</publishTime>
@@ -1225,10 +1303,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/07/2013 21:32:22</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/11/2013 20:23:09</publishTime>
+      <publishTime>05/22/2014 01:54:00</publishTime>
+    </File>
+    <File Include="Views/Tools/Example.cshtml">
+      <publishTime>05/22/2014 02:01:24</publishTime>
     </File>
     <File Include="Views/Tools/Index.cshtml">
-      <publishTime>10/20/2013 16:07:10</publishTime>
+      <publishTime>05/21/2014 22:04:10</publishTime>
+    </File>
+    <File Include="Views/Tools/SelectionSaver.cshtml">
+      <publishTime>05/15/2014 22:17:34</publishTime>
     </File>
     <File Include="Views/User/Index.cshtml">
       <publishTime>10/20/2013 16:06:04</publishTime>

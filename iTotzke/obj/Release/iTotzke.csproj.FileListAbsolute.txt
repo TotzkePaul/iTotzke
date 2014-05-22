@@ -31,3 +31,4 @@ C:\Users\Paul\documents\visual studio 2012\Projects\iTotzke\iTotzke\bin\Dapper.d
 C:\Users\Paul\documents\visual studio 2012\Projects\iTotzke\iTotzke\bin\Dapper.pdb
 C:\Users\Paul\documents\visual studio 2012\Projects\iTotzke\iTotzke\bin\Dapper.xml
 C:\Users\Paul\documents\visual studio 2012\Projects\iTotzke\iTotzke\obj\Release\iTotzke.csprojResolveAssemblyReference.cache
+C:\Users\Paul\Documents\Visual Studio 2012\Projects\iTotzke\iTotzke\bin\iTotzke.dll.config

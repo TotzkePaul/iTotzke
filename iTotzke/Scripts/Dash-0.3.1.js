@@ -1,6 +1,6 @@
 /*!
  * Dash JavaScript Library
- * Version 0.3.0
+ * Version 0.3.1
  *
  * Copyright 2011, Eric Boll
  * Licensed under the GNU Lesser General Public License.

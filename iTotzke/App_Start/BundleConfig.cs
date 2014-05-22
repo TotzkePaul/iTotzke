@@ -8,13 +8,16 @@ namespace iTotzke.App_Start
         public static void RegisterBundles(BundleCollection bundles)
         {
             BundleTable.EnableOptimizations = true;
+
             bundles.Add(new Bundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
                         "~/Scripts/jquery-ui-{version}.js",
-                        //"~/Scripts/jquery-ui-1.9.20.custom.js",
+                        //"~/Scripts/jquery-1.10.2.js",
+                        //"~/Scripts/jquery-ui-1.10.4.js",
                         "~/Scripts/DataTables-1.9.4/media/js/jquery.dataTables.js",
                         //"~/Scripts/Dash-0.2.0/Dash.js",
                         "~/Scripts/Dash-0.3.1.js",
+                        "~/Scripts/bootstrap-3.1.1.js",
                         "~/Scripts/Core.js"));
             /**
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
@@ -47,6 +50,7 @@ namespace iTotzke.App_Start
                 ));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
+                        "~/Content/themes/base/jquery.ui-1.10.4.css",
                         "~/Content/themes/base/jquery.ui.core.css",
                         "~/Content/themes/base/jquery.ui.resizable.css",
                         "~/Content/themes/base/jquery.ui.selectable.css",
