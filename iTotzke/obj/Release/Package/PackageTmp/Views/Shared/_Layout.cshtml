@@ -8,12 +8,15 @@
         <meta name="wot-verification" content="494e6dca85b910409257"/>
         <meta name="norton-safeweb-site-verification" content="rqfz1w1oe8jd7lnv7ignckiinripuha8dj0bic6fnxpprsogci67qkvcxksn524tgjwjkl15jeukeale5x2b-5bs8u1dypup1n90443cmysu41npl-s7ggbyf3kq2-h6" />
         @Styles.Render("~/Content/css")
-        @Styles.Render("~/Content/themes/base/css")
-       
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/modernizr")     
-        
+        @Styles.Render("~/Content/bootstrap/css/bootstrap");
 
+        @Styles.Render("~/Content/themes/base/css")
+        @Scripts.Render("~/bundles/jquery")
+        @*
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>*@
+        @Scripts.Render("~/bundles/modernizr")    
         <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script> 
     </head>
     <body>

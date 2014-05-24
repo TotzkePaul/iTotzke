@@ -28,7 +28,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/29/2013 23:20:10</publishTime>
     </File>
     <File Include="bin/iTotzke.dll">
-      <publishTime>05/22/2014 11:45:12</publishTime>
+      <publishTime>05/23/2014 00:52:21</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>09/29/2013 23:20:18</publishTime>
@@ -68,6 +68,42 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>09/29/2013 23:20:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap/css/bootstrap-theme.css">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap/css/bootstrap-theme.css.map">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap/css/bootstrap-theme.min.css">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap/css/bootstrap.css">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap/css/bootstrap.css.map">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap/css/bootstrap.min.css">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap/js/bootstrap.js">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Content/bootstrap/js/bootstrap.min.js">
+      <publishTime>02/13/2014 09:24:42</publishTime>
     </File>
     <File Include="Content/chat.css">
       <publishTime>09/24/2013 23:46:40</publishTime>
@@ -655,7 +691,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/02/2014 16:13:18</publishTime>
     </File>
     <File Include="Content/tools.css">
-      <publishTime>05/21/2014 23:50:02</publishTime>
+      <publishTime>05/22/2014 20:31:34</publishTime>
     </File>
     <File Include="Database/markov00.dat">
       <publishTime>04/24/2014 00:52:29</publishTime>
@@ -930,6 +966,48 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/ai.js">
       <publishTime>10/07/2013 00:38:03</publishTime>
     </File>
+    <File Include="Scripts/bootstrap-3.1.1.js">
+      <publishTime>05/22/2014 19:10:29</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-3.1.1.min.js">
+      <publishTime>05/22/2014 19:10:46</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap/css/bootstrap-theme.css">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap/css/bootstrap-theme.css.map">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap/css/bootstrap-theme.min.css">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap/css/bootstrap.css">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap/css/bootstrap.css.map">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap/css/bootstrap.min.css">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap/js/bootstrap.js">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap/js/bootstrap.min.js">
+      <publishTime>02/13/2014 09:24:42</publishTime>
+    </File>
     <File Include="Scripts/Core.js">
       <publishTime>11/15/2013 01:09:11</publishTime>
     </File>
@@ -973,7 +1051,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/04/2013 22:59:22</publishTime>
     </File>
     <File Include="Scripts/Dash-0.3.1.js">
-      <publishTime>10/08/2013 15:23:04</publishTime>
+      <publishTime>05/22/2014 19:10:36</publishTime>
     </File>
     <File Include="Scripts/Dash.js">
       <publishTime>10/04/2013 00:58:42</publishTime>
@@ -1288,7 +1366,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/11/2013 19:58:57</publishTime>
     </File>
     <File Include="Views/Shared/NavBar.cshtml">
-      <publishTime>11/11/2013 20:36:06</publishTime>
+      <publishTime>05/23/2014 00:49:58</publishTime>
     </File>
     <File Include="Views/Shared/NotFound.cshtml">
       <publishTime>11/07/2013 16:34:16</publishTime>
@@ -1303,10 +1381,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/07/2013 21:32:22</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>05/22/2014 01:54:00</publishTime>
+      <publishTime>05/23/2014 00:51:09</publishTime>
     </File>
     <File Include="Views/Tools/Example.cshtml">
-      <publishTime>05/22/2014 02:01:24</publishTime>
+      <publishTime>05/22/2014 19:10:53</publishTime>
     </File>
     <File Include="Views/Tools/Index.cshtml">
       <publishTime>05/21/2014 22:04:10</publishTime>

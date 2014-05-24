@@ -12,9 +12,24 @@
     }
 </style>
 <script>
-
-    $(document).ready(function () {DefaultNS.Init();
-
+    
+    $(document).ready(function () {
+        
+        DefaultNS.Init();
+        //jQuery.noConflict();
+       
+        $("#myInput").button({
+            text: false,
+            icons: { primary: "ui-icon-trash" }
+        });
+        $("#myA").button({
+            text: false,
+            icons: { primary: "ui-icon-trash" }
+        });
+        $("#myButton").button({
+            text: false,
+            icons: { primary: "ui-icon-trash" }
+        });
     });
 
     var DefaultNS = new function () {
@@ -53,10 +68,11 @@
 
     }
 </script>
-<button data-button="true; icons: ui-icon-seek-end;">Button with icon only</button>
-<button>Button with icon on the left</button>
-<button>Button with two icons</button>
-<button>Button with two icons and no text</button>
+<button id="myButton">A button element</button>
+
+<input id="myInput" type="submit" value="A submit button">
+
+<a id="myA" href="#">An anchor</a>
 
     <table id='ExampleTable' data-table='true; fnRowCallback:DefaultNS.ExampleCallback; bLengthChange:false'>
         <thead>
