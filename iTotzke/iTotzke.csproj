@@ -373,6 +373,10 @@
     <Content Include="Views\Apps\Language.cshtml" />
     <Content Include="Views\Tools\SelectionSaver.cshtml" />
     <Content Include="Views\Tools\Example.cshtml" />
+    <Content Include="Views\Home\Bugs.cshtml" />
+    <Content Include="Views\Home\RSS.cshtml" />
+    <Content Include="Views\Home\Credits.cshtml" />
+    <Content Include="Views\Home\Privacy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

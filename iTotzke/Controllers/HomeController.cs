@@ -39,16 +39,28 @@ namespace itotzke.Controllers
             return View();
         }
 
+        public ActionResult Credits()
+        {
+            return View();
+        }
+
+        public ActionResult Bugs()
+        {
+            return View();
+        }
+
+        public ActionResult RSS()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
-            //List<Content> pageContents = db.RunListProcedure<Content>("[SelectAllContentByArea]", new { contentArea = "About" });
-            /**
-           ViewBag.Message = pageContents.First(x => x.ContentName == "TestTitle");
-           ViewBag.Message = pageContents.First(x => x.ContentName == "TestTitle");
-           ViewBag.Message = pageContents.First(x => x.ContentName == "TestTitle");
-           ViewBag.Message = pageContents.First(x => x.ContentName == "TestTitle");
-           ViewBag.Message = pageContents.First(x => x.ContentName == "TestTitle");
-           */
+            return View();
+        }
+
+        public ActionResult Privacy()
+        {
             return View();
         }
 

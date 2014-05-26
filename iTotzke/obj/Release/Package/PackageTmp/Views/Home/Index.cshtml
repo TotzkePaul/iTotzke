@@ -2,66 +2,86 @@
     ViewBag.Title = "Home Page";
 }
 @section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
+    @*
+        <section class="featured">
+            <div class="content-wrapper">
+                <hgroup class="title">
+                    <h1>@ViewBag.Title.</h1>
+                    <h2>@ViewBag.Message</h2>
+                </hgroup>
+                <p>
+                    I created this website as an online protfolio to publish works, and research.
+                </p>
+            </div>
+        </section>*@
+}
+
+<div class="row clearfix">
+    <div class="col-md-12 column">
+        <div class="jumbotron">
+            <h1>
+                Hello, {{name}}!
+            </h1>
             <p>
                 I created this website as an online protfolio to publish works, and research.
             </p>
+            <p>
+                <a class="btn btn-primary btn-large" href="#">Learn more</a>
+            </p>
         </div>
-    </section>
-}
-<!--<div class="arrow" style="border-top-color: #3e5667;"></div>-->
-
-<h3>Current Projects:</h3>
-<ol class="round">
-    <li class="one">
-        <h5>AI for chat</h5>
-        The purpose of this website is to produce a learning system for speaking the english language.
-        @Html.ActionLink("Learn More...", "Carly", "Home")
-    </li>
-
-    <li class="two">
-        <h5>The Discrete Vertex Guarding Problem in Monotone Polygons</h5>
-        Abstract: <br />
-        In computational geometry, the discrete vertex guarding problem is a
-        visibility problem involves <br />
-        <br />
-        picking a finite set of points that can “see” all internal vertices of the
-        polygon. A polygon is considered to be monotone if a vertical line, drawn
-        through the polygon, will touch the boundary at most twice. The terrain T
-        is a set of m vertices {v1, v2, …, vm}. A vertex vi is defined by the
-        coordinates (xi, yi) in
-        euclidean space. The vertices are ordered in the manner of vi < vi+1. A
-        line segment is from vi to vi+1, for where i &lt; m, and there is a line segment
-        from vm to v1 to form a polygon. The goal of this project is to
-        produce a set of vertices that provide a good solution for a large polygon
-        very quickly and consistently. The motivation is this problem is NP
-        Complete, and the perfect solution could take until the heat death of the
-        universe, given that n is sufficiently large. In order to combat time as a
-        constraint, we sacrifice a little bit of precision.
-        @Html.ActionLink("Learn More...", "Monotone","Apps")
-    </li>
-
-    <li class="three">
-        <h5>Flipped Classrooms</h5>
-        Normally, you take your lectures in the classroom, and do your homework at home.
-        Flipped means you do the opposite. Hopefully, I'll be uploading some videos with
-        sample homework.
-
-        @Html.ActionLink("Learn More...", "ContraClass","Apps")
-    </li>
-    <li class="four">
-        <h5>Tile self-assesmbly simultor. </h5>
-        The goal is to create an HTML based simulator for the aTAM
-        <br/> This project was discontinued for professional reasons
-    </li>
-    <li class="five">
-        <h5>The Live Essay</h5>
-        The Live essay to designed to adjust content based on a users preference from a short quiz. This allows users to skip unnessisary information such as agreed upon points
-        <br />@Html.ActionLink("Learn More...", "LiveEssay","Apps")
-    </li>
-</ol>
+    </div>
+</div>
+<div class="row clearfix">
+    <div class="col-md-4 column">
+        <h2 class="" contenteditable="false">AI for chat</h2>
+        <p class="" contenteditable="false">The purpose of this website is to produce a learning system for speaking the english language.</p>
+        <p class="">
+            @Html.ActionLink("Learn More...", "Carly", "Home")
+        </p>
+    </div>
+    <div class="col-md-4 column">
+        <h2 class="" contenteditable="false">Capstone Project</h2>
+        <p class="" contenteditable="false"><h5 style="color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Topic: The Discrete Vertex Guarding Problem in Monotone Polygons.&nbsp;</h5></p>
+        <p>
+            @Html.ActionLink("Learn More...", "Monotone", "Apps")
+        </p>
+    </div>
+    <div class="col-md-4 column">
+        <h2 class="" contenteditable="false">
+            Tile Research
+        </h2>
+        <p class="" contenteditable="false">The goal is to create an HTML based simulator for the aTAM&nbsp;</p>
+        <p>
+            <a class="btn" href="#">View details »</a>
+        </p>
+    </div>
+</div>
+<div class="row clearfix">
+    <div class="col-md-4 column">
+        <h2 class="" contenteditable="false">
+            Flipped Classroom
+        </h2>
+        <p class="" contenteditable="false">Normally, you take your lectures in the classroom, and do your homework at home. Flipped means you do the opposite. Hopefully, I'll be uploading some videos with sample homework</p>
+        <p>
+            <a href="/Apps/ContraClass">Learn More...</a>
+        </p>
+    </div>
+    <div class="col-md-4 column">
+        <h2 class="" contenteditable="false">
+            Live Essay
+        </h2>
+        <p class="" contenteditable="false">The Live essay to designed to adjust content based on a user's preference from a short quiz. This allows users to skip unnecessary information such as agreed upon points.&nbsp;</p>
+        <p>
+            @Html.ActionLink("Learn More...", "LiveEssay", "Apps")
+        </p>
+    </div>
+    <div class="col-md-4 column">
+        <h2 class="" contenteditable="false">
+            Blog
+        </h2>
+        <p class="" contenteditable="false">Here I'll talk about WebDev and other things that interest me.</p>
+        <p>
+            <a class="btn" href="https://twitter.com/iTotzkeDotCom">View details »</a>
+        </p>
+    </div>
+</div>
