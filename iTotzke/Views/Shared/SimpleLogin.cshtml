@@ -28,13 +28,13 @@
                                     @Html.LabelFor(u => u.RememberMe)
                                 </div>
                                 <input id="btnUserLogin" style="display: inline" class="btn btn-default" type="submit" value="Log In" />
-                                <input style="display: inline" class="btn btn-default" type="button" onclick=" location.href = @Url.Action("Register", "User")" value="Register"  />                     
-            
+                                @Html.ActionLink("Register", "Register", "User", null, new { @class = "btn btn-default", type = "button" })
+                                @*<input style="display: inline" class="btn btn-default" type="button" onclick='location.href = @Url.Action("Register", "User")' value="Register"  /> *@
                             </fieldset>
                         }
                         <div>
                             <br />
-                            @Html.ActionLink("Register", "Register", "User")
+                            
                             @Html.ActionLink("Forgot Login?", "Recover", "User")
                         </div>
                     </div>

@@ -35,7 +35,7 @@ namespace iTotzke.Models
             }
             try
             {
-                return db.RunListProcedure<int>("UserLogin", new { username = username, password = hashString }).Any();
+                return db.RunListProcedure<Composites.User>("[LoginUser]", new { username = username, password = hashString }).Any();
             }
             catch (Exception)
             {

@@ -43,6 +43,10 @@ html, body {
   color: #eee;
 }
 
+.italics {
+     font: italic;
+}
+
 /**
 a {
     color: #333;

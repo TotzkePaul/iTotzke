@@ -24,5 +24,10 @@ namespace iTotzke.Controllers
         {
             return View();
         }
+
+        public ActionResult WebPad()
+        {
+            return View();
+        }
     }
 }

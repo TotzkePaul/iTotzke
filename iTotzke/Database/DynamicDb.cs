@@ -47,7 +47,7 @@ namespace itotzke.Database
             Insert
         }
 
-        public bool ExcuteQuery(string procedureName, Object args, string schema = "dbo")
+        public bool ExcuteQuery(string procedureName, Object args, string schema = "iTotzke")
         {
             RouteValueDictionary dbArgsDictionary = new RouteValueDictionary(args);
             var dbArgs = new DynamicParameters();
@@ -73,7 +73,7 @@ namespace itotzke.Database
             }
         }
 
-        public List<T> RunQuery<T>(Db type, string tableName, string[] args, string[] cols = null, string schema = "dbo")
+        public List<T> RunQuery<T>(Db type, string tableName, string[] args, string[] cols = null, string schema = "iTotzke")
         {
             string sql = "";
             string argsString = string.Join(",", args.ToArray());
@@ -124,7 +124,7 @@ namespace itotzke.Database
             }
         }
 
-        public T RunProcedure<T>(string procedureName, Object args, string schema = "dbo")
+        public T RunProcedure<T>(string procedureName, Object args, string schema = "iTotzke")
         {
             RouteValueDictionary dbArgsDictionary = new RouteValueDictionary(args);
             var dbArgs = new DynamicParameters();
@@ -149,8 +149,8 @@ namespace itotzke.Database
             }
         }
 
-        
-        public List<T> RunListProcedure<T>(string procedureName, Object args, string schema = "dbo")
+
+        public List<T> RunListProcedure<T>(string procedureName, Object args, string schema = "iTotzke")
         {
             RouteValueDictionary dbArgsDictionary = new RouteValueDictionary(args);
             var dbArgs = new DynamicParameters();
@@ -174,7 +174,7 @@ namespace itotzke.Database
             }
         }
 
-        public List<T> CachedRunListProcedure<T>(string procedureName, Object args, string schema = "dbo")
+        public List<T> CachedRunListProcedure<T>(string procedureName, Object args, string schema = "iTotzke")
         {
             RouteValueDictionary dbArgsDictionary = new RouteValueDictionary(args);
             var dbArgs = new DynamicParameters();
@@ -198,7 +198,7 @@ namespace itotzke.Database
             }
         }
 
-        public void AsyncQuery(string procedureName, Object args, string schema = "dbo")
+        public void AsyncQuery(string procedureName, Object args, string schema = "iTotzke")
         {
             RouteValueDictionary dbArgsDictionary = new RouteValueDictionary(args);
             var dbArgs = new DynamicParameters();

@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "WebPad";
+}
+
+<h2>WebPad</h2>
+
+<div id="result">
+    Words: <span id="wordCount">0</span><br />
+    Total Characters(including trails): <span id="totalChars">0</span><br />
+    Characters (excluding trails): <span id="charCount">0</span><br />
+    Characters (excluding all spaces): <span id="charCountNoSpace">0</span>
+</div>
+<br />
+<textarea id="demotext" autofocus="" placeholder="Start entering some text here"></textarea>
+<br/>
+
+<input id="countbtn" type="button" value="Code" onclick="showCode();">
+
+
+@Scripts.Render("~/bundles/tools")
+@Styles.Render("~/Content/tools")
+<script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("demotext"), {
+        lineNumbers: true,
+        onKeyEvent: function (e, s) {
+            alert('h'); counter(); }
+
+        //mode: "text/html",
+        //matchBrackets: true
+    });
+
+    editor.on("keyup", function(cm, event) {
+        counter();
+    });
+    
+    function counter() {
+        var value = editor.getValue();
+        if (value.length == 0) {
+            $('#wordCount').html(0);
+            $('#totalChars').html(0);
+            $('#charCount').html(0);
+            $('#charCountNoSpace').html(0);
+            return;
+        }
+
+        var regex = /\s+/gi;
+        var wordCount = value.trim().replace(regex, ' ').split(' ').length;
+        var totalChars = value.length;
+        var charCount = value.trim().length;
+        var charCountNoSpace = value.replace(regex, '').length;
+
+        $('#wordCount').html(wordCount);
+        $('#totalChars').html(totalChars);
+        $('#charCount').html(charCount);
+        $('#charCountNoSpace').html(charCountNoSpace);
+
+    }
+    $(document).ready(function () {
+        $('#countbtn').click(counter);
+    });
+</script>

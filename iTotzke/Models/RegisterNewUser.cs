@@ -40,7 +40,6 @@ namespace iTotzke.Models
 
         public bool IsValid(string username, string password, string email, DynamicDb db)
         {
-
             byte[] bytes = Encoding.UTF8.GetBytes(password);
             SHA256Managed hashstring = new SHA256Managed();
             byte[] hash = hashstring.ComputeHash(bytes);
@@ -51,10 +50,11 @@ namespace iTotzke.Models
             }
             try
             {
-                decimal? userId = db.RunProcedure<decimal?>("InsertUser", new { username = username, password = hashString, email = email });
-                return userId != null;
+                var user = db.RunProcedure<Composites.User>("InsertUser", new { username = username, password = hashString, email = email, userdata = "" });
+
+                return user != null;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return false;
             }

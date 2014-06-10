@@ -7,7 +7,7 @@ namespace iTotzke.App_Start
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
-            BundleTable.EnableOptimizations = true;
+            BundleTable.EnableOptimizations = false;
 
             bundles.Add(new Bundle("~/bundles/jquery").Include(
                         "~/Scripts/jQuery/jquery-{version}.js",
@@ -18,6 +18,7 @@ namespace iTotzke.App_Start
                         "~/Scripts/lib/backbone{version}.js",
                         //"~/Scripts/jQuery/Dash-{version}.js",
                         "~/Scripts/bootstrap/js/bootstrap.js",
+                        "~/Scripts/jQuery/it.js",
                         //add bootstrap editable
                         "~/Scripts/it/Core.js"));
             /**
@@ -32,13 +33,21 @@ namespace iTotzke.App_Start
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include("~/Scripts/lib/modernizr-*"));
 
+            bundles.Add(new ScriptBundle("~/Scripts/admin").Include("~/Scripts/it/admin.js"));
+
             bundles.Add(new Bundle("~/bundles/tools").Include(
                         "~/Scripts/jQuery/jquery.markitup.js",
+                        "~/Scripts/CodeMirror/Countable.js",
+                        "~/Scripts/CodeMirror/codemirror.js",
                         "~/Scripts/tools.js" ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/it/site.css"));
 
-            bundles.Add(new StyleBundle("~/Content/tools").Include("~/Content/it/tools.css"));
+
+            bundles.Add(new StyleBundle("~/Content/tools").Include(
+                "~/Content/it/tools.css",
+                "~/Scripts/CodeMirror/codemirror.css"
+                ));
 
             bundles.Add(new StyleBundle("~/Content/chat").Include("~/Content/it/chat.css"));
 
